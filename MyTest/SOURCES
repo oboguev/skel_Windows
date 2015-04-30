@@ -1,0 +1,10 @@
+TARGETNAME=mytest
+TARGETTYPE=DRIVER
+
+SOURCES=mytest.c   \
+        errlog.mc  \
+        mytest.rc
+
+MSC_WARNING_LEVEL=/W4 /WX
+
+SIGNCODE_CMD=signtool sign /v /s MyTestStore /n MyTestCert $(TARGET)
